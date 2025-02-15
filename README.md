@@ -1,0 +1,28 @@
+# GenAI template 🚀
+
+A template for your kickstart into GenAI! 🎁
+
+It combines [Ollama](https://ollama.com/) [LangChain/LangGraph](https://www.langchain.com/), [Jupyter](https://jupyter.org/), [Open WebUI](https://openwebui.com/) and [Agent Inbox](https://github.com/langchain-ai/agent-inbox)!
+
+## How to use
+
+To spin up all services run:
+
+`make run`
+
+This will spin up the following services:
+
+- [`localhost:8888/<TOKEN_HERE>`](http://localhost:8888): [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/)
+- [`localhost:8080`](http://localhost:8080): [Open WebUI](https://openwebui.com/)
+- [`localhost:2024`](http://localhost:2024): [LangGraph Server API](https://langchain-ai.github.io/langgraph/)
+- [`localhost:3000`](http://localhost:3000): [Agent Inbox](https://github.com/langchain-ai/agent-inbox)
+- [`localhost:11434`](http://localhost:11434): [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md)
+
+## `jupyter` folder
+
+If you work with Jupyter, you can use the `jupyter` folder to store your notebooks and other files.
+You can add your requirements to the `jupyter/requirements.txt` file, and they will be installed in the Jupyter container.
+
+## Preload Ollama models
+
+If you want to preload models, just add them to the `ollama/models_to_preload.txt` file.

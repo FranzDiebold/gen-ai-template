@@ -1,0 +1,55 @@
+services:
+  jupyter:
+    image: franzdiebold/datascience-ultimate:latest
+    ports:
+      - 8888:8888
+    volumes:
+      - ./jupyter:/usr/src/app
+    working_dir: /usr/src/app
+    depends_on:
+      - ollama
+      - open-webui
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - 11434:11434
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    volumes:
+      - ./ollama/ollama:/root/.ollama
+      - ./ollama/entrypoint.sh:/entrypoint.sh
+      - ./ollama/models_to_preload.txt:/models_to_preload.txt
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    volumes:
+      - ./open_webui:/app/backend/data
+    depends_on:
+      - ollama
+    ports:
+      - 8080:8080
+    environment:
+      - OLLAMA_BASE_URLS=http://ollama:11434
+      - ENV=dev
+      - WEBUI_AUTH=False
+
+  langgraph-server:
+    build: ./langgraph_server
+    volumes:
+      - ./langgraph_server:/app
+    ports:
+      - "2024:2024"
+    depends_on:
+      - ollama
+    entrypoint: ["langgraph", "dev"]
+
+  agent-inbox:
+    image: node:latest
+    volumes:
+      - ./agent_inbox:/usr/src/app
+    working_dir: /usr/src/app
+    ports:
+      - "3000:3000"
+    entrypoint: ["/bin/bash", "entrypoint.sh"]

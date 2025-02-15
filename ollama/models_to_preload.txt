@@ -1,0 +1,2 @@
+llama3.2:1b
+qwen:0.5b
