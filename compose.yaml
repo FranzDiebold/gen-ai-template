@@ -40,10 +40,9 @@ services:
     volumes:
       - ./langgraph_server:/app
     ports:
-      - "2024:2024"
+      - 2024:2024
     depends_on:
       - ollama
-    entrypoint: ["langgraph", "dev"]
 
   agent-inbox:
     image: node:latest
