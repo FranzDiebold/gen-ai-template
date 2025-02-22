@@ -1,12 +1,9 @@
 """State module for managing agent state."""
 
-from __future__ import annotations
-
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class State:
+class State(BaseModel):
     """Class representing the state of the agent interaction."""
 
     interrupt_response: str = "example"
