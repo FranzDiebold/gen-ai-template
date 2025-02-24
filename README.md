@@ -18,11 +18,17 @@ This will spin up the following services:
 - [`localhost:3000`](http://localhost:3000): [Agent Inbox](https://github.com/langchain-ai/agent-inbox)
 - [`localhost:11434`](http://localhost:11434): [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md)
 
-## `jupyter` folder
+## Components
+
+### Jupyter
 
 If you work with Jupyter, you can use the `jupyter` folder to store your notebooks and other files.
 You can add your requirements to the `jupyter/requirements.txt` file, and they will be installed in the Jupyter container.
 
-## Preload Ollama models
+### LangGraph Server
+
+You can define your LangGraph graph in the `langgraph_server` folder. The requirements are automatically installed from the `langgraph_server/requirements.txt` file.
+
+### Ollama
 
 If you want to preload models, just add them to the `ollama/models_to_preload.txt` file.
