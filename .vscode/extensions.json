@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "eamodio.gitlens"
+    ]
+}
