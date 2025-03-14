@@ -79,4 +79,4 @@ workflow.add_edge("__start__", "human_node")
 
 # Compile the workflow into an executable graph
 graph = workflow.compile()
-graph.name = "Agent Inbox Example"  # This defines the custom name in LangSmith
+graph.name = "Agent Example"  # This defines the custom name in LangSmith

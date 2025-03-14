@@ -2,7 +2,7 @@
 
 A template for your kickstart into GenAI! 🎁
 
-It combines [Ollama](https://ollama.com/) [LangChain/LangGraph](https://www.langchain.com/), [Jupyter](https://jupyter.org/), [Open WebUI](https://openwebui.com/) and [Agent Inbox](https://github.com/langchain-ai/agent-inbox)!
+It combines [Ollama](https://ollama.com/) [LangChain/LangGraph](https://www.langchain.com/), [Jupyter](https://jupyter.org/), [Open WebUI](https://openwebui.com/), [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui) and [Agent Inbox](https://github.com/langchain-ai/agent-inbox)!
 
 ## How to use
 
@@ -15,6 +15,7 @@ This will spin up the following services:
 - [`localhost:8888/<TOKEN_HERE>`](http://localhost:8888): [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/)
 - [`localhost:8080`](http://localhost:8080): [Open WebUI](https://openwebui.com/)
 - [`localhost:2024`](http://localhost:2024): [LangGraph Server API](https://langchain-ai.github.io/langgraph/)
+- [`localhost:3000`](http://localhost:5173): [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui)
 - [`localhost:3000`](http://localhost:3000): [Agent Inbox](https://github.com/langchain-ai/agent-inbox)
 - [`localhost:11434`](http://localhost:11434): [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md)
 

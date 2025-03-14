@@ -52,3 +52,12 @@ services:
     ports:
       - "3000:3000"
     entrypoint: ["/bin/bash", "entrypoint.sh"]
+
+  agent-chat-ui:
+    image: node:latest
+    volumes:
+      - ./agent_chat_ui:/usr/src/app
+    working_dir: /usr/src/app
+    ports:
+      - "5173:5173"
+    entrypoint: ["/bin/bash", "entrypoint.sh"]
