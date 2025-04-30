@@ -5,3 +5,4 @@ langchain-ollama
 pydantic
 langgraph-cli[inmem]
 python-dotenv
+langchain-mcp-adapters
