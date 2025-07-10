@@ -18,6 +18,7 @@ This will spin up the following services:
 - [`localhost:3000`](http://localhost:5173): [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui)
 - [`localhost:3000`](http://localhost:3000): [Agent Inbox](https://github.com/langchain-ai/agent-inbox)
 - [`localhost:11434`](http://localhost:11434): [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.md)
+- [`localhost:6274`](http://localhost:6274): [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 
 ## Components
 
