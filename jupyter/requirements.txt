@@ -2,6 +2,7 @@ langchain-core
 langchain-community
 langgraph
 langchain-ollama
+langchain-openai
 pydantic
 langgraph-cli
 langchain-mcp-adapters

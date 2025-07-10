@@ -6,6 +6,9 @@ services:
     volumes:
       - ./jupyter:/usr/src/app
     working_dir: /usr/src/app
+    models:
+      - smollm2
+      - gemma3n
     depends_on:
       - ollama
       - open-webui
@@ -28,12 +31,17 @@ services:
       - ./open_webui:/app/backend/data
     depends_on:
       - ollama
+    models:
+      - smollm2
+      - gemma3n
     ports:
       - 8080:8080
     environment:
       - OLLAMA_BASE_URLS=http://ollama:11434
       - ENV=dev
       - WEBUI_AUTH=False
+      - OPENAI_API_BASE_URL=http://model-runner.docker.internal/engines/v1
+      - OPENAI_API_KEY=na
 
   langgraph-server:
     build: ./langgraph_server
@@ -61,3 +69,9 @@ services:
     ports:
       - "5173:5173"
     entrypoint: ["/bin/bash", "entrypoint.sh"]
+
+models:
+  smollm2:
+    model: ai/smollm2
+  gemma3n:
+    model: ai/gemma3n
