@@ -1,7 +1,8 @@
 langchain-core
 langchain-community
-langgraph
 langchain-ollama
+langchain-openai
+langgraph
 pydantic
 langgraph-cli[inmem]
 python-dotenv
