@@ -62,6 +62,8 @@ services:
     working_dir: /usr/src/app
     ports:
       - "3000:3000"
+    depends_on:
+      - langgraph-server
     entrypoint: ["/bin/bash", "entrypoint.sh"]
 
   agent-chat-ui:
@@ -71,6 +73,11 @@ services:
     working_dir: /usr/src/app
     ports:
       - "5173:5173"
+    depends_on:
+      - langgraph-server
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:2024
+      - NEXT_PUBLIC_ASSISTANT_ID=agent
     entrypoint: ["/bin/bash", "entrypoint.sh"]
 
   mcp-inspector:
