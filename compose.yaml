@@ -9,21 +9,6 @@ services:
     models:
       - smollm2
       - gemma3n
-    depends_on:
-      - ollama
-      - open-webui
-
-  ollama:
-    image: ollama/ollama:latest
-    ports:
-      - 11434:11434
-    environment:
-      - OLLAMA_HOST=0.0.0.0
-    volumes:
-      - ./ollama/ollama:/root/.ollama
-      - ./ollama/entrypoint.sh:/entrypoint.sh
-      - ./ollama/models_to_preload.txt:/models_to_preload.txt
-    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -32,12 +17,9 @@ services:
     models:
       - smollm2
       - gemma3n
-    depends_on:
-      - ollama
     ports:
       - 8080:8080
     environment:
-      - OLLAMA_BASE_URLS=http://ollama:11434
       - ENV=dev
       - WEBUI_AUTH=False
       - OPENAI_API_BASE_URL=http://model-runner.docker.internal/engines/v1
@@ -52,8 +34,6 @@ services:
     models:
       - smollm2
       - gemma3n
-    depends_on:
-      - ollama
 
   agent-inbox:
     image: node:latest
