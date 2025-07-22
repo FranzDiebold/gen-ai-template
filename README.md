@@ -21,10 +21,10 @@ This will spin up the following services:
 
 ## Components
 
-### Jupyter
+### marimo
 
-If you work with Jupyter, you can use the `jupyter` folder to store your notebooks and other files.
-You can add your requirements to the `jupyter/requirements.txt` file, and they will be installed in the Jupyter container.
+If you work with [marimo](https://github.com/marimo-team/marimo), you can use the `marimo` folder to store your notebooks and other files.
+You can add your requirements to the `marimo/requirements.txt` file, and they will be installed in the marimo container.
 
 ### LangGraph Server
 
