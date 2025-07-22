@@ -1,11 +1,10 @@
 services:
-  jupyter:
-    image: franzdiebold/datascience-ultimate:latest
+  marimo:
+    build: ./marimo
     ports:
-      - 8888:8888
+      - 8000:8000
     volumes:
-      - ./jupyter:/usr/src/app
-    working_dir: /usr/src/app
+      - ./marimo:/app
     models:
       - smollm2
       - gemma3n
