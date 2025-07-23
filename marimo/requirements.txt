@@ -5,3 +5,4 @@ langchain-openai
 pydantic
 langgraph-cli
 langchain-mcp-adapters
+ruff
