@@ -1,19 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,python,jupyternotebooks,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,python,jupyternotebooks,visualstudiocode
-
-### JupyterNotebooks ###
-# gitignore template for Jupyter Notebooks
-# website: http://jupyter.org/
-
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-
-# IPython
-profile_default/
-ipython_config.py
-
-# Remove previous ipynb_checkpoints
-#   git rm -r .ipynb_checkpoints/
+# Created by https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,python,visualstudiocode
 
 ### macOS ###
 # General
@@ -127,8 +113,11 @@ docs/_build/
 target/
 
 # Jupyter Notebook
+.ipynb_checkpoints
 
 # IPython
+profile_default/
+ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -236,6 +225,7 @@ pyrightconfig.json
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,python,jupyternotebooks,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode
 
-.virtual_documents/
+
+marimo/__marimo__/
