@@ -8,6 +8,7 @@ services:
     models:
       - smollm2
       - gemma3n
+      - embeddinggemma
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -74,3 +75,5 @@ models:
     model: ai/smollm2
   gemma3n:
     model: ai/gemma3n
+  embeddinggemma:
+    model: ai/embeddinggemma

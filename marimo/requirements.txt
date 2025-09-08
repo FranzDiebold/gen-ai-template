@@ -6,3 +6,4 @@ pydantic
 langgraph-cli
 langchain-mcp-adapters
 ruff
+scikit-learn
