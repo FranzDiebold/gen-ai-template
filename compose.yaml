@@ -5,6 +5,8 @@ services:
       - 8000:8000
     volumes:
       - ./marimo:/app
+    depends_on:
+      - qdrant
     models:
       - smollm2
       - gemma3n
@@ -59,6 +61,14 @@ services:
       - NEXT_PUBLIC_API_URL=http://localhost:2024
       - NEXT_PUBLIC_ASSISTANT_ID=agent
     entrypoint: ["/bin/bash", "entrypoint.sh"]
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant/qdrant_data:/qdrant/storage
 
   mcp-inspector:
     image: ghcr.io/modelcontextprotocol/inspector:latest

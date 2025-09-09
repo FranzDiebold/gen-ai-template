@@ -7,3 +7,4 @@ langgraph-cli
 langchain-mcp-adapters
 ruff
 scikit-learn
+qdrant-client

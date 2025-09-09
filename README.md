@@ -17,6 +17,7 @@ This will spin up the following services:
 - [`localhost:2024`](http://localhost:2024): [LangGraph Server API](https://langchain-ai.github.io/langgraph/)
 - [`localhost:3000`](http://localhost:3000): [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui)
 - [`localhost:3001`](http://localhost:3001): [Agent Inbox](https://github.com/langchain-ai/agent-inbox)
+- [`http://localhost:6333/dashboard`](http://localhost:6333/dashboard): [Qdrant Vector Search Engine](https://github.com/qdrant/qdrant)
 - [`localhost:6274`](http://localhost:6274): [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 
 ## Components
