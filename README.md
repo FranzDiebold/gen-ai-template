@@ -2,7 +2,8 @@
 
 A template for your kickstart into GenAI! 🎁
 
-It combines [Docker Model Runner](https://docs.docker.com/ai/model-runner/), [LangChain/LangGraph](https://www.langchain.com/), [marimo](https://github.com/marimo-team/marimo), [Open WebUI](https://openwebui.com/), [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui) and [Agent Inbox](https://github.com/langchain-ai/agent-inbox)!
+It combines [Docker Model Runner](https://docs.docker.com/ai/model-runner/), [LangChain/LangGraph](https://www.langchain.com/), [marimo](https://github.com/marimo-team/marimo), [Open WebUI](https://openwebui.com/), [n8n](https://github.com/n8n-io/n8n),
+[Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui) and [Agent Inbox](https://github.com/langchain-ai/agent-inbox)!
 
 ## How to use
 
@@ -14,6 +15,7 @@ This will spin up the following services:
 
 - [`localhost:8000`](http://localhost:8000): [marimo](https://github.com/marimo-team/marimo)
 - [`localhost:8080`](http://localhost:8080): [Open WebUI](https://openwebui.com/)
+- [`localhost:5678`](http://localhost:5678): [n8n](https://github.com/n8n-io/n8n)
 - [`localhost:2024`](http://localhost:2024): [LangGraph Server API](https://langchain-ai.github.io/langgraph/)
 - [`localhost:3000`](http://localhost:3000): [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui)
 - [`localhost:3001`](http://localhost:3001): [Agent Inbox](https://github.com/langchain-ai/agent-inbox)

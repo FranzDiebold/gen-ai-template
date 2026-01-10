@@ -27,6 +27,21 @@ services:
       - OPENAI_API_BASE_URL=http://model-runner.docker.internal/engines/v1
       - OPENAI_API_KEY=na
 
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    restart: always
+    ports:
+      - "127.0.0.1:5678:5678"
+    environment:
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_PORT=5678
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_SECURE_COOKIE=false
+      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
+      - TZ=${GENERIC_TIMEZONE}
+    volumes:
+      - n8n_data:/home/node/.n8n
+
   langgraph-server:
     build: ./langgraph_server
     volumes:
@@ -79,6 +94,9 @@ services:
       - ALLOWED_ORIGINS=http://0.0.0.0:6274,http://localhost:6274
       - HOST=0.0.0.0
       - DANGEROUSLY_OMIT_AUTH=true
+
+volumes:
+  n8n_data:
 
 models:
   smollm2:
