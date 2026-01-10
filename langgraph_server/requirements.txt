@@ -1,8 +1,6 @@
 langchain-core
-langchain-community
 langchain-openai
 langgraph
 pydantic
 langgraph-cli[inmem]
-python-dotenv
 langchain-mcp-adapters
