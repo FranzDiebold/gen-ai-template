@@ -11,6 +11,7 @@ services:
       - smollm2
       - gemma3n
       - embeddinggemma
+      - qwen3
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -105,3 +106,5 @@ models:
     model: ai/gemma3n
   embeddinggemma:
     model: ai/embeddinggemma
+  qwen3:
+    model: ai/qwen3:4B-UD-Q4_K_XL
